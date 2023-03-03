@@ -23,4 +23,14 @@ public class AdvertModel {
     @Column(name = "disc")
     String disc;
 
+    @Column(name = "length")
+    String length;
+
+    @Column(name = "width")
+    String width;
+
+    @Column(name = "height")
+    String height;
+
+
 }
