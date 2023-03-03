@@ -45,6 +45,43 @@
 
     <section class="jumbotron text-center">
         <div class="container">
+            <form action="/addAdvert" method="post">
+                <label for="nameforid"></label>
+                <input id="nameforid" type="text"
+                       name="name" placeholder="Введите наименование товара" class="form-control"><br>
+
+                <label for="priceforid"></label>
+                <input id="priceforid" type="text"
+                       name="price" placeholder="Введите цену товара" class="form-control"><br>
+
+                <label for="weightforid"></label>
+                <input id="weightforid" type="text"
+                       name="weight" placeholder="Введите вес товара" class="form-control"><br>
+
+
+                <label class="row">
+                    <label class="col-3">Ввведите размеры товара</label>
+                    <label for="dimlenghtid" class="col-3">
+                        <input id="dimlenghtid" type="text"
+                               name="width" placeholder="Введите длину товара" class="form control" >
+                    </label>
+
+                    <label for="dimwightid" class="col-3">
+                    <input id="dimwightid" type="text"
+                       name="width" placeholder="Введите ширину товара" class="form control" >
+                </label>
+
+                    <label for="dimheighid" class="col-3">
+                        <input id="dimheighid" type="text"
+                               name="width" placeholder="Введите высоту товара" class="form control" >
+                    </label>
+                </label><br>
+
+                <label for="discforid"></label>
+                <input id="discforid" type="text"
+                       name="disc" placeholder="Введите подробное описание товара" class="form-control"><br>
+                <button type="submit" class="btn btn-success">Добавить товар</button>
+            </form>
         </div>
     </section>
 

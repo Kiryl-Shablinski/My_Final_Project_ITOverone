@@ -11,7 +11,7 @@ public class AdvertModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
-    @Column(name="name")
+    @Column(name = "name")
     String name;
 
     @Column(name = "price")
@@ -20,7 +20,7 @@ public class AdvertModel {
     @Column(name = "weight")
     String weight;
 
-    @Column(name ="disc")
+    @Column(name = "disc")
     String disc;
 
 }
