@@ -19,12 +19,13 @@ public class AddAdvertController {
 
     @PostMapping
     public String postData(@RequestParam String name, @RequestParam String price,
-                           @RequestParam String weight, @RequestParam String length,
+                           @RequestParam String weight, @RequestParam String disc,@RequestParam String length,
                            @RequestParam String width, @RequestParam String height){
         AdvertModel advertModel = new AdvertModel();
         advertModel.setName(name);
         advertModel.setPrice(price);
         advertModel.setWeight(weight);
+        advertModel.setDisc(disc);
         advertModel.setLength(length);
         advertModel.setWidth(width);
         advertModel.setHeight(height);

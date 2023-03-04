@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,10 +43,14 @@
 </header>
 <main role="main">
 
-    <section class="jumbotron text-center">
-        <div class="container">
-        </div>
-    </section>
+    <div class="album py-5 bg-light">
+            <div th:each="el : ${allAdverts}" class="alert alert-info mt-2">
+                <h3 th:text="${el.getName()}"></h3>
+                <p th:text="${el.getWeight()}"></p>
+                <p th:text="${el.getPrice()}"></p>
+                <p th:text="${el.getDisc()}"></p>
+            </div>
+    </div>
 
     <div class="album py-5 bg-light">
     </div>
