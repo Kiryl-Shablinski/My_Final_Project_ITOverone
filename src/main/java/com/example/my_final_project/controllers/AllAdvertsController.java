@@ -22,7 +22,7 @@ public class AllAdvertsController {
 
     @GetMapping
     public String getAdverts(Model model){
-        List<AdvertModel> list = new ArrayList<>();
+        List<AdvertModel> list;
         list = (List<AdvertModel>) advertRepository.findAll();
         model.addAttribute("allAdverts", list);
         return "allAdverts";

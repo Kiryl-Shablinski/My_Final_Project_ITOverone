@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,14 +42,39 @@
     </div>
 </header>
 <main role="main">
-    <div class="album py-5 bg-light">
-            <div th:each="el : ${allAdverts}" class="alert alert-info mt-2">
-                <h3 th:text="${el.getName()}"></h3>
-                <p>Цена,руб <span th:text="${el.getPrice()}"></span></p>
-                <a class="btn btn-warning" th:href="@{/advert/{id}(id=${el.getId()})}">Подробнее</a>
-            </div>
-    </div>
 
+    <div class="album px-3 py-5 bg-light">
+        <div th:if="${advert!=null}" class="alert alert-info mt-2">
+            <h3 th:text="${advert.get().getName()}"></h3>
+            <p>Цена,руб <span th:text="${advert.get().getPrice()}"></span></p>
+            <p>Вес,гр <span th:text="${advert.get().getWeight()}"></span></p>
+               <p>Габаритные размеры,см</p>
+                   <p> Длина <span th:text="${advert.get().getLength()}"></span>
+                   </p>
+                  <p> Ширина <span th:text="${advert.get().getWidth()}"></span>
+                  </p>
+                   <p> Высота <span th:text="${advert.get().getHeight()}"></span>
+                   </p>
+            <p>Описание товара: <span th:text="${advert.get().getDisc()}"></span></p>
+        </div>
+    </div>
+<div class="album px-3 py-5 bg-light">
+    <h3>Оставить заявку на приобретение</h3>
+    <div class="row py-5-lg-5">
+        <form action="/advert" method="post">
+            <label for="nameid">
+                <input id="nameid" type="text" name="name" placeholder="Как к Вам можно обращаться">
+            </label>
+            <label for="typeid">
+                <input id="typeid" type="text" name="type" placeholder="Какой тип связи предпочитаете">
+            </label>
+            <label for="contactid">
+                <input id="contactid" type="text" name="contact" placeholder="Ваши контакты">
+            </label>
+            <button type="submit" class="btn btn-success">Оставить заявку</button>
+        </form>
+    </div>
+</div>
 
 </main>
 
