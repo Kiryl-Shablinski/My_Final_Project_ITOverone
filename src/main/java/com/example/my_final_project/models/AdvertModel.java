@@ -2,7 +2,7 @@ package com.example.my_final_project.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
+//база данных для товаров
 @Entity
 @Table(name = "advert_shop_model")
 @Data
